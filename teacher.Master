@@ -1,0 +1,224 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="teacher.master.cs" Inherits="home.teacher" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+    <script src="js/ios-orientationchange-fix.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.swipebox.min.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="swipebox.css" rel="stylesheet" type="text/css" />
+  
+
+    
+
+    <style type="text/css">
+        .style1
+        {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <div class="header-bg">
+                <div class="wrap">
+                    <div class="total-box">
+                        <div class="total">
+                            <div class="header_top">
+                                <asp:Menu ID="Menu1" runat="server" BackColor="Black" 
+                            DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Large" 
+                            ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="10px" 
+                             Height="40px" Width="100%" onmenuitemclick="Menu1_MenuItemClick">
+                                    <DynamicHoverStyle BackColor="orange" ForeColor="White" />
+                                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                    <DynamicMenuStyle BackColor="orange" />
+                                    <DynamicSelectedStyle BackColor="orange" />
+                                    <Items>
+                                        <asp:MenuItem NavigateUrl="~/home1.aspx" Text="Home" ToolTip="This is home page" 
+                                    Value="Home"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/about.aspx" Text="About" ToolTip="this is about" 
+                                    Value="About"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/contact.aspx" Text="Contact" Value="Contact">
+                                        </asp:MenuItem>
+                                        <%--<asp:MenuItem Text="Customer" Value="Customer">
+                                    <asp:MenuItem NavigateUrl="~/Customer/Cust.aspx" Text="Cust" Value="Cust">
+                                    </asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Sales" Value="Sales">
+                                    <asp:MenuItem NavigateUrl="~/Sales/Sales.aspx" Text="Sales" Value="Sales">
+                                    </asp:MenuItem>
+                                </asp:MenuItem>--%>
+                                        <asp:MenuItem Text="Infrastructure" Value="Infrastructure" >
+                                            <asp:MenuItem Text="Library" Value="Library"></asp:MenuItem>
+                                            <asp:MenuItem Text="Classrooms" Value="Classrooms"></asp:MenuItem>
+                                            <asp:MenuItem Text="Campus" Value="Campus"></asp:MenuItem>
+                                            <asp:MenuItem Text="Laborataries" Value="Laborataries"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                        <asp:MenuItem Text="Academics" Value="Academics">
+                                            <asp:MenuItem Text="Academic Planner" Value="Academic Planner"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                        <asp:MenuItem Text="Admissions" Value="Admissions"></asp:MenuItem>
+                                    </Items>
+                                    <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                    <StaticSelectedStyle BackColor="#FFCC66" />
+                                </asp:Menu>
+
+
+
+                                <%--<div class="menu">
+                                    <ul>
+                                        <li class="active"><a href="index.html">Home</a></li>
+                                    
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="staff.html">Infrastructure</a></li>
+                                        <li><a href="programs.html">Academics</a></li>
+                                        <li><a href="contact.html">Admissions</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="contact.html">Logout</a></li>
+						    	            <div class="clear">
+                                            </div>
+                                    </ul>
+                                </div>--%>
+
+                                <ul class="follow_icon">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <div class="clear" >
+                                </div>
+                            </div>
+                            <div class="header-bottom">
+                                <div class="logo">
+                                    <h1>
+                                        <a href="index.html">School Name</a></h1>
+                                </div>
+                                <div class="search">
+                                    <form>
+                                    <input type="text" value="">
+                                    <input type="submit" value="">
+                                    </form>
+                                </div>
+                                <div class="clear">
+                                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="head" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="banner-box">
+                <div class="wrap">
+                    <div class="main-top">
+                        <div class="main">
+                            <div class="banner">
+                                &nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    <p>
+        &nbsp;</p>
+                                </asp:ContentPlaceHolder>
+                            </div>
+                            <div class="section-top">
+                                <div class="col_1_of_3 span_1_of_3">
+                                    <div class="title-img">
+                                        <div class="title-desc">
+                                            <p>
+                                                Recommending Creer Path</p>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <p class="desc">
+                                        <strong>Find out the career path which will  suit you the best based on your strenghts, weaknesses, interests, etc. It considers your current and previous academic performance, the online aptitude test and your teacher guardian's opinion. Check it out and All the Best!</strong></p>
+                                    <a href="#" class="btn btn-primary"><span>Go to Page</span><img src="web/images/more_arrow.png" alt=""></a>
+                                </div>
+                                <div class="col_1_of_3 span_1_of_3">
+                                    <div class="title-img1">
+                                        <div class="title-desc">
+                                            <p>
+                                                Updating Questions for Online Tests</p>
+                                        </div>
+                                        <div class="clear">
+                                            <br />
+                                        </div>
+                                    </div>
+                                    <p class="desc-middle">
+                                        <strong>Go ahead and practice for your exams. Consists of important questions updated by your teachers. Practice MCQs within the set time limit and get instant results. Also attemt the aptitude test for career path evaluation. All the Best!</strong></p>
+                                    <a href="#" class="btn btn-primary1"><span>Go to Page</span><img src="web/images/more_arrow.png" alt=""></a>
+                                </div>
+                                <div class="col_1_of_3 span_1_of_3">
+                                    <div class="title-img2">
+                                        <div class="title-desc">
+                                            <p>
+                                                Upload Homework</p>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <p class="last">
+                                        <strong>Have got previous year's textbooks in a good condition?....Do not throw them away ! Sell them to your junior school friends. You can also buy books from your seniors. 'Reuse' is what we always learn, right? Save Paper Save Money Go Green !
+                                        </strong>
+                                    </p>
+                                    <a href="#" class="btn btn-primary2"><span>Go to Page</span><img src="web/images/more_arrow.png" alt=""></a>
+                                </div>
+                                <div class="col_1_of_3 span_1_of_3">
+                                    <div class="title-img1">
+                                        <div class="title-desc">
+                                            <p>
+                                                Updating Notices </p>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <p class="desc-middle">
+                                        <strong>Get information about your School Bus needed for your commute, based on your address and the bus path. Also find out your friends and classmates who are in the same bus. Enjoy the Ride!</strong></p>
+                                    <p class="desc-middle">
+                                        &nbsp;</p>
+                                    <a href="#" class="btn btn-primary1"><span>Go to Page</span><img src="web/images/more_arrow.png" alt=""></a>
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <%-- <div class="col_1_of_3 span_1_of_3">
+                    <h3>
+                        Teaching Support</h3>
+                    <ul class="dishes_list">
+                        <li><a href="#">Consectetur adipisicing elit</a></li>
+                        <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
+                        <li><a href="#">Labore et dolore magna aliqua.</a></li>
+                        <li><a href="#">Sed do eiusmod tempor Dolore</a></li>
+                        <li><a href="#">Abore et dolore magna Dolore elit</a></li>
+                        <li><a href="#">Incididunt ut labore et dolore</a></li>
+                        <li><a href="#">Incididunt ut labore et dolore</a></li>
+                        <li class="last"><a href="#">Adipisicing elit, sed do eiusmod</a></li>
+										<div class="clear">
+                            </div>
+                    </ul>
+                    <a href="#" class="btn btn-primary1"><span>Read more</span><img src="web/images/more_arrow.png" alt=""></a>
+                </div>--%>
+                <div class="wrap">
+                    <div class="copy-right">
+                        <p class="style1">
+                            Digital School Software</p>
+                    </div>
+                </div>
+            </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
